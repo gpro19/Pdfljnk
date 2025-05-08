@@ -1,0 +1,13 @@
+name: telegram-pdf-bot
+services:
+  - name: app
+    port: 8000
+    env:
+      - key: TELEGRAM_TOKEN
+        value: "7724351827:AAEOQOKezxoV0EcPYfiWPpbsR_TPHctMhIc"  # Ganti dengan token bot Telegram Anda
+      - key: KOYEB_APP_NAME
+        value: "anonymous-mommy-usgerbt-b8956f99"  # Ganti dengan nama app Koyeb Anda
+    command: [ "python", "app.py" ]  # <-- Ini yang harus ditambahkan
+    scaling:
+      min: 1
+      max: 1
