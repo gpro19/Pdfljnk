@@ -8,6 +8,6 @@ services:
       - key: KOYEB_APP_NAME
         value: "anonymous-mommy-usgerbt-b8956f99"  # Ganti dengan nama app Koyeb Anda
     command: [ "python", "app.py" ]  # <-- Ini yang harus ditambahkan
-    scaling:
-      min: 1
-      max: 1
+    volumes:
+      - path: /app/uploads
+        size: 1GB
